@@ -5,7 +5,9 @@ A web application that allows to manage a public transport SQL database. The dat
 * 🗝️ Password: admin
 
 ## Entity relationship diagram:
+![](Images/Database%20schema.png)
 
 ## Database schema:
+![](Images/Entity%20relationship%20diagram.png)
 
 ## Application screens:
