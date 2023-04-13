@@ -11,3 +11,11 @@ A web application that allows to manage a public transport SQL database. The dat
 ![](Images/Entity%20relationship%20diagram.png)
 
 ## Application screens:
+Login page:
+![](Images/Login%20Panel.png)
+Main page:
+![](Images/Main%20Page.png)
+Bus lines page:
+![](Images/Bus%20Lines.png)
+Data editing page:
+![](Images/Edit%20Page.png)
