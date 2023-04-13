@@ -1,0 +1,200 @@
+prompt --application/pages/page_00001
+begin
+--   Manifest
+--     PAGE: 00001
+--   Manifest End
+wwv_flow_api.component_begin (
+ p_version_yyyy_mm_dd=>'2021.04.15'
+,p_release=>'21.1.0'
+,p_default_workspace_id=>27994415979082868
+,p_default_application_id=>120
+,p_default_id_offset=>0
+,p_default_owner=>'WKSP_BAZYDANYCHPROJEKT'
+);
+wwv_flow_api.create_page(
+ p_id=>1
+,p_user_interface_id=>wwv_flow_api.id(28885432899942659)
+,p_name=>'Home'
+,p_alias=>'HOME'
+,p_step_title=>'Bus System'
+,p_autocomplete_on_off=>'OFF'
+,p_inline_css=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'.js-navCollapsed .t-TreeNav .a-treeView-node--topLevel>.a-TreeView-content.is-hover .a-TreeView-label{',
+'    visibility: visible;',
+'    left: 48px;',
+'    padding: 0 16px;',
+'    width: auto;',
+'    background-color: #0459a1;',
+'}',
+'',
+'.apex-side-nav.js-navCollapsed .t-Body-nav, .apex-side-nav.ks-navCollapsed .t-Body-nav .t-TreeNav {',
+'    z-index: 999;',
+'}'))
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'JAKUB.CZAJKA@STUDENT.PUT.POZNAN.PL'
+,p_last_upd_yyyymmddhh24miss=>'20221223233613'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(29790560886478217)
+,p_plug_name=>unistr('Ilo\015B\0107 pracownik\00F3w')
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_api.id(28795817095942614)
+,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'BODY'
+,p_query_type=>'TABLE'
+,p_query_table=>'PRACOWNIK'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_num_rows=>15
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(29790679319478218)
+,p_region_id=>wwv_flow_api.id(29790560886478217)
+,p_chart_type=>'bar'
+,p_height=>'400'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hover_behavior=>'dim'
+,p_stack=>'off'
+,p_connect_nulls=>'Y'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_legend_rendered=>'off'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(29790790038478219)
+,p_chart_id=>wwv_flow_api.id(29790679319478218)
+,p_seq=>10
+,p_name=>unistr('Ilo\015B\0107 pracownik\00F3w')
+,p_data_source_type=>'TABLE'
+,p_query_table=>'PRACOWNIK'
+,p_include_rowid_column=>false
+,p_items_label_column_name=>unistr('ZAW\00D3D')
+,p_aggregate_function=>'COUNT'
+,p_color=>'#4cd964'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>true
+,p_items_label_position=>'auto'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(29790835309478220)
+,p_chart_id=>wwv_flow_api.id(29790679319478218)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(29790939840478221)
+,p_chart_id=>wwv_flow_api.id(29790679319478218)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_format_type=>'decimal'
+,p_decimal_places=>0
+,p_format_scaling=>'none'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(29791017943478222)
+,p_plug_name=>unistr('\015Aredni zarobek na stanowisku')
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_api.id(28795817095942614)
+,p_plug_display_sequence=>20
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_new_grid_row=>false
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_num_rows=>15
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(29791191561478223)
+,p_region_id=>wwv_flow_api.id(29791017943478222)
+,p_chart_type=>'bar'
+,p_height=>'400'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hover_behavior=>'dim'
+,p_stack=>'off'
+,p_connect_nulls=>'Y'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_legend_rendered=>'off'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(29791262440478224)
+,p_chart_id=>wwv_flow_api.id(29791191561478223)
+,p_seq=>10
+,p_name=>unistr('\015Aredni zarobek na stanowisku')
+,p_data_source_type=>'TABLE'
+,p_query_table=>'PRACOWNIK'
+,p_include_rowid_column=>false
+,p_items_value_column_name=>'WYNAGRODZENIE'
+,p_items_label_column_name=>unistr('ZAW\00D3D')
+,p_aggregate_function=>'AVG'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(29791390620478225)
+,p_chart_id=>wwv_flow_api.id(29791191561478223)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(29791443807478226)
+,p_chart_id=>wwv_flow_api.id(29791191561478223)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_format_type=>'decimal'
+,p_decimal_places=>0
+,p_format_scaling=>'none'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.component_end;
+end;
+/

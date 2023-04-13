@@ -1,0 +1,217 @@
+prompt --application/pages/page_00205
+begin
+--   Manifest
+--     PAGE: 00205
+--   Manifest End
+wwv_flow_api.component_begin (
+ p_version_yyyy_mm_dd=>'2021.04.15'
+,p_release=>'21.1.0'
+,p_default_workspace_id=>27994415979082868
+,p_default_application_id=>120
+,p_default_id_offset=>0
+,p_default_owner=>'WKSP_BAZYDANYCHPROJEKT'
+);
+wwv_flow_api.create_page(
+ p_id=>205
+,p_user_interface_id=>wwv_flow_api.id(28885432899942659)
+,p_name=>unistr('Edytor bilet\00F3w w biletomacie')
+,p_alias=>'EDYTOR-RELACJA-BILET'
+,p_step_title=>'Edytor Relacja Bilet'
+,p_autocomplete_on_off=>'OFF'
+,p_javascript_code=>'var htmldb_delete_message=''"DELETE_CONFIRM_MSG"'';'
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_last_updated_by=>'JAKUB.CZAJKA@STUDENT.PUT.POZNAN.PL'
+,p_last_upd_yyyymmddhh24miss=>'20230125094215'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(52717876914992946)
+,p_plug_name=>'Edytor Relacja Bilet'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(28795817095942614)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'BODY'
+,p_query_type=>'TABLE'
+,p_query_table=>'RELACJA BILET-BILETOMAT'
+,p_include_rowid_column=>true
+,p_is_editable=>true
+,p_edit_operations=>'i:u:d'
+,p_lost_update_check_type=>'VALUES'
+,p_plug_source_type=>'NATIVE_FORM'
+);
+wwv_flow_api.create_page_button(
+ p_id=>wwv_flow_api.id(52721069031992950)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_api.id(52717876914992946)
+,p_button_name=>'CANCEL'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_api.id(28860955421942646)
+,p_button_image_alt=>unistr('Powr\00F3t')
+,p_button_position=>'REGION_TEMPLATE_CLOSE'
+,p_button_redirect_url=>'f?p=&APP_ID.:204:&SESSION.::&DEBUG.:::'
+);
+wwv_flow_api.create_page_button(
+ p_id=>wwv_flow_api.id(52721891663992951)
+,p_button_sequence=>20
+,p_button_plug_id=>wwv_flow_api.id(52717876914992946)
+,p_button_name=>'DELETE'
+,p_button_action=>'DEFINED_BY_DA'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_api.id(28860955421942646)
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>unistr('Usu\0144')
+,p_button_position=>'REGION_TEMPLATE_DELETE'
+,p_button_execute_validations=>'N'
+,p_warn_on_unsaved_changes=>null
+,p_button_condition=>'P205_ROWID'
+,p_button_condition_type=>'ITEM_IS_NOT_NULL'
+,p_database_action=>'DELETE'
+);
+wwv_flow_api.create_page_branch(
+ p_id=>wwv_flow_api.id(52722942612992951)
+,p_branch_action=>'f?p=&APP_ID.:204:&SESSION.::&DEBUG.&success_msg=#SUCCESS_MSG#'
+,p_branch_point=>'AFTER_PROCESSING'
+,p_branch_type=>'REDIRECT_URL'
+,p_branch_sequence=>1
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(52718272221992948)
+,p_name=>'P205_ROWID'
+,p_source_data_type=>'ROWID'
+,p_is_primary_key=>true
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(52717876914992946)
+,p_item_source_plug_id=>wwv_flow_api.id(52717876914992946)
+,p_use_cache_before_default=>'NO'
+,p_prompt=>'Rowid'
+,p_source=>'ROWID'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_label_alignment=>'RIGHT'
+,p_field_template=>wwv_flow_api.id(28858144660942645)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_protection_level=>'S'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(52718612093992948)
+,p_name=>unistr('P205_BILETOMAT_NUMER_IDENTYFIKUJ\0104CY')
+,p_source_data_type=>'NUMBER'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_api.id(52717876914992946)
+,p_item_source_plug_id=>wwv_flow_api.id(52717876914992946)
+,p_prompt=>unistr('Numer identyfikuj\0105cy biletomatu')
+,p_source=>unistr('BILETOMAT_NUMER_IDENTYFIKUJ\0104CY')
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_DISPLAY_ONLY'
+,p_field_template=>wwv_flow_api.id(28858235150942645)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attribute_01=>'Y'
+,p_attribute_02=>'VALUE'
+,p_attribute_04=>'Y'
+,p_attribute_05=>'PLAIN'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(52719022425992948)
+,p_name=>'P205_BILET_RODZAJ_ULGI'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_api.id(52717876914992946)
+,p_item_source_plug_id=>wwv_flow_api.id(52717876914992946)
+,p_prompt=>'Rodzaj ulgi'
+,p_source=>'BILET_RODZAJ_ULGI'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_DISPLAY_ONLY'
+,p_field_template=>wwv_flow_api.id(28858235150942645)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attribute_01=>'Y'
+,p_attribute_02=>'VALUE'
+,p_attribute_04=>'Y'
+,p_attribute_05=>'PLAIN'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(52719451295992949)
+,p_name=>unistr('P205_BILET_OKRES_OBOWI\0104ZYWANIA')
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_api.id(52717876914992946)
+,p_item_source_plug_id=>wwv_flow_api.id(52717876914992946)
+,p_prompt=>unistr('Okres obowi\0105zywania')
+,p_source=>unistr('BILET_OKRES_OBOWI\0104ZYWANIA')
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_DISPLAY_ONLY'
+,p_field_template=>wwv_flow_api.id(28858235150942645)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attribute_01=>'Y'
+,p_attribute_02=>'VALUE'
+,p_attribute_04=>'Y'
+,p_attribute_05=>'PLAIN'
+);
+wwv_flow_api.create_page_da_event(
+ p_id=>wwv_flow_api.id(52117597531073935)
+,p_name=>'New'
+,p_event_sequence=>10
+,p_triggering_element_type=>'BUTTON'
+,p_triggering_button_id=>wwv_flow_api.id(52721891663992951)
+,p_bind_type=>'bind'
+,p_bind_event_type=>'click'
+);
+wwv_flow_api.create_page_da_action(
+ p_id=>wwv_flow_api.id(52117678653073936)
+,p_event_id=>wwv_flow_api.id(52117597531073935)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_CONFIRM'
+,p_attribute_01=>unistr('Czy na pewno chcesz usun\0105\0107 ten bilet z biletomatu ?')
+);
+wwv_flow_api.create_page_da_action(
+ p_id=>wwv_flow_api.id(52117700584073937)
+,p_event_id=>wwv_flow_api.id(52117597531073935)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
+,p_attribute_01=>'DELETE FROM "RELACJA BILET-BILETOMAT" WHERE ROWID = :P205_ROWID;'
+,p_attribute_02=>'P205_ROWID'
+,p_attribute_05=>'PLSQL'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_api.create_page_da_action(
+ p_id=>wwv_flow_api.id(52117895583073938)
+,p_event_id=>wwv_flow_api.id(52117597531073935)
+,p_event_result=>'TRUE'
+,p_action_sequence=>30
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_SUBMIT_PAGE'
+,p_attribute_02=>'Y'
+);
+wwv_flow_api.create_page_process(
+ p_id=>wwv_flow_api.id(52723836418992952)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_api.id(52717876914992946)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>'Process form Edytor Relacja Bilet'
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+);
+wwv_flow_api.create_page_process(
+ p_id=>wwv_flow_api.id(52723466613992951)
+,p_process_sequence=>10
+,p_process_point=>'BEFORE_HEADER'
+,p_region_id=>wwv_flow_api.id(52717876914992946)
+,p_process_type=>'NATIVE_FORM_INIT'
+,p_process_name=>'Initialize form Edytor Relacja Bilet'
+);
+wwv_flow_api.component_end;
+end;
+/
