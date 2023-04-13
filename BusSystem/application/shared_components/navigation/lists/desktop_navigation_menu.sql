@@ -1,0 +1,320 @@
+prompt --application/shared_components/navigation/lists/desktop_navigation_menu
+begin
+--   Manifest
+--     LIST: Desktop Navigation Menu
+--   Manifest End
+wwv_flow_api.component_begin (
+ p_version_yyyy_mm_dd=>'2021.04.15'
+,p_release=>'21.1.0'
+,p_default_workspace_id=>27994415979082868
+,p_default_application_id=>120
+,p_default_id_offset=>0
+,p_default_owner=>'WKSP_BAZYDANYCHPROJEKT'
+);
+wwv_flow_api.create_list(
+ p_id=>wwv_flow_api.id(28738770594942583)
+,p_name=>'Desktop Navigation Menu'
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(28896938753942670)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>unistr('Strona G\0142\00F3wna')
+,p_list_item_link_target=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-home'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(29787399664464652)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'Pracownicy'
+,p_list_item_link_target=>'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-address-card-o'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'2,15,34'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(46093620292546753)
+,p_list_item_display_sequence=>120
+,p_list_item_link_text=>'Dodaj pracownika'
+,p_list_item_link_target=>'f?p=&APP_ID.:16:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-user-plus'
+,p_parent_list_item_id=>wwv_flow_api.id(29787399664464652)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(50085304397941191)
+,p_list_item_display_sequence=>260
+,p_list_item_link_text=>'Dodawaj nowego kierowce'
+,p_list_item_link_target=>'f?p=&APP_ID.:34:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-user-clock'
+,p_parent_list_item_id=>wwv_flow_api.id(29787399664464652)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'34'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(29787966480466555)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'Przejazdy'
+,p_list_item_link_target=>'f?p=&APP_ID.:3:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-calendar-clock'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'3,17,80,81,84'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(46144914461121782)
+,p_list_item_display_sequence=>130
+,p_list_item_link_text=>'Dodaj przejazd'
+,p_list_item_link_target=>'f?p=&APP_ID.:17:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-calendar-plus-o'
+,p_parent_list_item_id=>wwv_flow_api.id(29787966480466555)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'17'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(52903140610948098)
+,p_list_item_display_sequence=>280
+,p_list_item_link_text=>unistr('ilePrzejazd\00F3w Autobusem')
+,p_list_item_link_target=>'f?p=&APP_ID.:80:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-search'
+,p_parent_list_item_id=>wwv_flow_api.id(29787966480466555)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'80'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(52923663815026537)
+,p_list_item_display_sequence=>290
+,p_list_item_link_text=>unistr('ilePrzejazd\00F3w na Linii')
+,p_list_item_link_target=>'f?p=&APP_ID.:81:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-cloud-search'
+,p_parent_list_item_id=>wwv_flow_api.id(29787966480466555)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'81'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(29788595874468577)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>'Autobusy'
+,p_list_item_link_target=>'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-bus'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'4,18'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(29799041442573824)
+,p_list_item_display_sequence=>60
+,p_list_item_link_text=>unistr('Modele Autobus\00F3w')
+,p_list_item_link_target=>'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-list'
+,p_parent_list_item_id=>wwv_flow_api.id(29788595874468577)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'6,20'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(46503966346677268)
+,p_list_item_display_sequence=>160
+,p_list_item_link_text=>'Dodaj model'
+,p_list_item_link_target=>'f?p=&APP_ID.:20:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-accordion'
+,p_parent_list_item_id=>wwv_flow_api.id(29799041442573824)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'20'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(46376482203768710)
+,p_list_item_display_sequence=>140
+,p_list_item_link_text=>'Dodaj autobus'
+,p_list_item_link_target=>'f?p=&APP_ID.:18:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-wrench'
+,p_parent_list_item_id=>wwv_flow_api.id(29788595874468577)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'18'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(29798481532571854)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>'Zajezdnie'
+,p_list_item_link_target=>'f?p=&APP_ID.:5:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-home'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'5,19'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(46494495492643084)
+,p_list_item_display_sequence=>150
+,p_list_item_link_text=>'Dodaj zajezdnie'
+,p_list_item_link_target=>'f?p=&APP_ID.:19:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-chevron-right'
+,p_parent_list_item_id=>wwv_flow_api.id(29798481532571854)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'19'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(29799684664576972)
+,p_list_item_display_sequence=>70
+,p_list_item_link_text=>unistr('Przegl\0105dy pojazd\00F3w')
+,p_list_item_link_target=>'f?p=&APP_ID.:7:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-clipboard-check'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'7,21,35'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(46516659514705493)
+,p_list_item_display_sequence=>170
+,p_list_item_link_text=>unistr('Dodaj przegl\0105d')
+,p_list_item_link_target=>'f?p=&APP_ID.:21:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-clipboard-plus'
+,p_parent_list_item_id=>wwv_flow_api.id(29799684664576972)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'21'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(50096293881033953)
+,p_list_item_display_sequence=>270
+,p_list_item_link_text=>unistr('Dodaj pozytywny przegl\0105d')
+,p_list_item_link_target=>'f?p=&APP_ID.:35:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-clipboard-clock'
+,p_parent_list_item_id=>wwv_flow_api.id(29799684664576972)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'35'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(48163355486936535)
+,p_list_item_display_sequence=>220
+,p_list_item_link_text=>'Trasy'
+,p_list_item_link_target=>'f?p=&APP_ID.:26:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-accessor-more'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'26,27'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(29801408922583216)
+,p_list_item_display_sequence=>100
+,p_list_item_link_text=>'Linie Autobusowe'
+,p_list_item_link_target=>'f?p=&APP_ID.:10:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-number-1-o'
+,p_parent_list_item_id=>wwv_flow_api.id(48163355486936535)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'10,24'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(46572194573939768)
+,p_list_item_display_sequence=>200
+,p_list_item_link_text=>unistr('Dodaj linie autobusow\0105')
+,p_list_item_link_target=>'f?p=&APP_ID.:24:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-plus-circle-o'
+,p_parent_list_item_id=>wwv_flow_api.id(29801408922583216)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'24'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(29802089071584756)
+,p_list_item_display_sequence=>110
+,p_list_item_link_text=>'Przystanki'
+,p_list_item_link_target=>'f?p=&APP_ID.:11:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-hand-stop-o'
+,p_parent_list_item_id=>wwv_flow_api.id(48163355486936535)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'11,25'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(46585274977952131)
+,p_list_item_display_sequence=>210
+,p_list_item_link_text=>'Dodaj przystanek'
+,p_list_item_link_target=>'f?p=&APP_ID.:25:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-pause-circle-o'
+,p_parent_list_item_id=>wwv_flow_api.id(29802089071584756)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'25'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(49171758677227387)
+,p_list_item_display_sequence=>230
+,p_list_item_link_text=>'Dodaj przystanek na koniec linii'
+,p_list_item_link_target=>'f?p=&APP_ID.:27:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-accessor-one'
+,p_parent_list_item_id=>wwv_flow_api.id(48163355486936535)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'27'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(52988359753872330)
+,p_list_item_display_sequence=>300
+,p_list_item_link_text=>'Dodaj przystanek'
+,p_list_item_link_target=>'f?p=&APP_ID.:84:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-line-map'
+,p_parent_list_item_id=>wwv_flow_api.id(48163355486936535)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'84'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(49635492084800285)
+,p_list_item_display_sequence=>240
+,p_list_item_link_text=>unistr('Sprzeda\017C bilet\00F3w')
+,p_list_item_link_target=>'f?p=&APP_ID.:28:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-dollar'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'28,29'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(29800212524578847)
+,p_list_item_display_sequence=>80
+,p_list_item_link_text=>'Biletomaty'
+,p_list_item_link_target=>'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-money'
+,p_parent_list_item_id=>wwv_flow_api.id(49635492084800285)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'8,22'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(46531147818753331)
+,p_list_item_display_sequence=>180
+,p_list_item_link_text=>'Dodaj biletomat'
+,p_list_item_link_target=>'f?p=&APP_ID.:22:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-window-plus'
+,p_parent_list_item_id=>wwv_flow_api.id(29800212524578847)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'22'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(29800806124580537)
+,p_list_item_display_sequence=>90
+,p_list_item_link_text=>'Bilety'
+,p_list_item_link_target=>'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-ticket'
+,p_parent_list_item_id=>wwv_flow_api.id(49635492084800285)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'9,23'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(46559263711865093)
+,p_list_item_display_sequence=>190
+,p_list_item_link_text=>'Dodaj bilet'
+,p_list_item_link_target=>'f?p=&APP_ID.:23:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-server-plus'
+,p_parent_list_item_id=>wwv_flow_api.id(29800806124580537)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'23'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(49658631888102079)
+,p_list_item_display_sequence=>250
+,p_list_item_link_text=>'Dodaj bilet do biletomatu'
+,p_list_item_link_target=>'f?p=&APP_ID.:29:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-file-plus'
+,p_parent_list_item_id=>wwv_flow_api.id(49635492084800285)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'29'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(28933334887942805)
+,p_list_item_display_sequence=>10000
+,p_list_item_link_text=>'Administration'
+,p_list_item_link_target=>'f?p=&APP_ID.:10000:&APP_SESSION.::&DEBUG.:'
+,p_list_item_icon=>'fa-user-wrench'
+,p_security_scheme=>wwv_flow_api.id(28888577786942662)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_api.component_end;
+end;
+/
